@@ -29,9 +29,9 @@ add_library( # Sets the name of the library.
 # you want to add. CMake verifies that the library exists before
 # completing its build.]
 
-include_directories(src/main/cpp/include1)
+include_directories(include/)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -L${CMAKE_SOURCE_DIR}/src/main/cpp/libs/${ANDROID_ABI}")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -L${CMAKE_SOURCE_DIR}/libs/{ANDROID_ABI}")
 
 find_library( # Sets the name of the path variable.
               log-lib
@@ -45,7 +45,7 @@ find_library( # Sets the name of the path variable.
 
 target_link_libraries( # Specifies the target library.
                        native-lib
-        avcodec avfilter avformat avutil swresample swscale
+                        avutil
                        # Links the target library to the log library
                        # included in the NDK.
                        ${log-lib} )
