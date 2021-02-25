@@ -21,6 +21,9 @@ android {
 
             }
         }
+        ndk {
+            abiFilters  "armeabi-v7a"
+        }
     }
 
     buildTypes {
@@ -39,6 +42,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    ndkVersion '17.2.4988734'
 }
 
 dependencies {

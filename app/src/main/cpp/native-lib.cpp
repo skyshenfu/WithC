@@ -7,5 +7,5 @@ extern "C" JNIEXPORT jstring JNICALL
 Java_com_example_withc_MainActivity_stringFromJNI(
         JNIEnv* env,
         jobject /* this */) {
-    return env->NewStringUTF("av_version_info()");
+    return env->NewStringUTF(av_version_info());
 }
